@@ -7,6 +7,8 @@ import { WeatherDetailComponent } from './views/weather-detail/weather-detail.co
 import { WeatherHomeComponent } from './views/weather-home/weather-home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WeatherTileComponent } from './components/weather-tile/weather-tile.component';
+import { FieldComponent } from './components/field/field.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
     WeatherDetailComponent,
     WeatherHomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    WeatherTileComponent,
+    FieldComponent
   ],
   imports: [
     BrowserModule,
