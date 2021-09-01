@@ -1,0 +1,5 @@
+<div class="container">
+    <app-field  class="width-25" [value]="forecastObj.dt_txt"></app-field>
+    <app-field  class="width-25" label="Temperature" [value]="forecastObj.main.temp" [showSuffix]="true"></app-field>
+    <app-field  class="width-25" label="Sea Level" [value]="forecastObj.main.sea_level"></app-field>
+</div>

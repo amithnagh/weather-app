@@ -7,10 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FieldComponent implements OnInit {
   @Input()
-  label:String = '';
+  label:string = '';
 
   @Input()
-  value: String = '';
+  value: any = '';
+
+  @Input()
+  showSuffix: boolean = false;
+
+  suffix = "°C";
 
   constructor() { }
 
