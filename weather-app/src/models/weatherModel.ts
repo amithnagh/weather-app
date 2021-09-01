@@ -1,6 +1,6 @@
-export interface weatherModel {
-    cityName: string,
-    temperature: any,
-    sunriseTime: any,
-    sunsetTime: any,
+export interface IWeatherModel {
+    name: string,
+    temperature: string,
+    sunriseTime: string,
+    sunsetTime: string,
 }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { weatherModel } from 'src/models/weatherModel';
+import { IWeatherModel } from 'src/models/weatherModel';
 
 @Component({
   selector: 'app-weather-tile',
@@ -9,11 +9,11 @@ import { weatherModel } from 'src/models/weatherModel';
 export class WeatherTileComponent implements OnInit {
 
   @Input()
-  weatherObj: weatherModel = { cityName: '', temperature: '', sunriseTime: '', sunsetTime: '' };
+  weatherObj: IWeatherModel = { name: '', temperature: '', sunriseTime: '', sunsetTime: '' };
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.weatherObj);
+    // console.log(this.weatherObj);
   }
 
 }
