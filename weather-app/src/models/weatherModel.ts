@@ -1,6 +1,6 @@
 export interface IWeatherModel {
     name: string,
-    temperature: string,
+    temperature: number,
     sunriseTime: string,
     sunsetTime: string,
 }

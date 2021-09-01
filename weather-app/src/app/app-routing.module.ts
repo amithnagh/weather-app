@@ -8,7 +8,7 @@ const routes: Routes = [
   path: 'home',
   component: WeatherHomeComponent,
   },
-  { path: 'detail',
+  { path: 'detail/:city',
     component: WeatherDetailComponent  
   },
   { path: '', redirectTo: '/home', pathMatch: 'full'}

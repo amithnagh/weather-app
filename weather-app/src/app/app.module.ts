@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { WeatherTileComponent } from './components/weather-tile/weather-tile.component';
 import { FieldComponent } from './components/field/field.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ForecastTileComponent } from './components/forecast-tile/forecast-tile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     WeatherTileComponent,
-    FieldComponent
+    FieldComponent,
+    ForecastTileComponent
   ],
   imports: [
     BrowserModule,

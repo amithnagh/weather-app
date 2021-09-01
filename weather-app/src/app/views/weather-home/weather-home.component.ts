@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IWeatherModel } from 'src/models/weatherModel';
-import { FarenheitToCelsius } from 'src/app/utils/farenheitToCelsius';
 import { DateTimeCoverter } from 'src/app/utils/dateTimeCoverter';
 import { WeatherService } from 'src/app/services/weather.service';
 
@@ -55,7 +54,6 @@ export class WeatherHomeComponent implements OnInit {
 //     name: "London",
 //     cod: 200
 // }
-farenHeitToCelsius =  new FarenheitToCelsius();
 dateTimeCoverter = new DateTimeCoverter();
 cityList: IWeatherModel[] = [];
 // cityList: IWeatherModel[] = [{ name: this.obj.name, temperature: this.farenHeitToCelsius.fToC(this.obj.main.temp), sunriseTime: this.dateTimeCoverter.timestampToDate(this.obj.sys.sunrise*1000), sunsetTime: this.dateTimeCoverter.timestampToDate(this.obj.sys.sunset*1000) },
@@ -67,11 +65,11 @@ cityList: IWeatherModel[] = [];
   constructor(private _weatherService: WeatherService) { }
 
   addCity = (name: string, temp: number, sunriseTime: number, sunsetTime: number) => {
-    this.cityList.push({ name: name, temperature: this.farenHeitToCelsius.fToC(temp),
+    this.cityList.push({ name: name, temperature: temp,
       sunriseTime: this.dateTimeCoverter.timestampToDate(sunriseTime*1000),
       sunsetTime: this.dateTimeCoverter.timestampToDate(sunsetTime*1000)
     })
-    console.log(this.cityList);
+    // console.log(this.cityList);
   }
 
   weatherService(city: string): void {
