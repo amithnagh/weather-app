@@ -1,8 +1,9 @@
 .header {
     height: 100px;
-    background-color: black;
+    background-color: #17a2b8;
     color: #fff;
     font-size: larger;
+    padding-left: 20px;
 }
 h1 {
     padding-top:20px;

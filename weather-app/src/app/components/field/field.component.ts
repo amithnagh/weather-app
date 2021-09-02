@@ -15,6 +15,9 @@ export class FieldComponent implements OnInit {
   @Input()
   showSuffix: boolean = false;
 
+  @Input()
+  icon: any = '';
+
   suffix = "°C";
 
   constructor() { }
