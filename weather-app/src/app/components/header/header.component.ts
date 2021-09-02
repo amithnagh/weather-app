@@ -6,12 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor(private _route: Router) { }
 
-  ngOnInit(): void {
-  }
   navigateToHome() {
     this._route.navigate(['home']);
   }

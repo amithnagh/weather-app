@@ -1,6 +1,5 @@
 .city-list {
     margin: 2px 10px;
-    /* width: 70%; */
     cursor: pointer;
     transition: transform .2s;
 }

@@ -5,14 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './forecast-tile.component.html',
   styleUrls: ['./forecast-tile.component.css']
 })
-export class ForecastTileComponent implements OnInit {
-
-  constructor() { }
+export class ForecastTileComponent {
 
   @Input()
   forecastObj: any;
-
-  ngOnInit(): void {
-  }
-
+  
 }

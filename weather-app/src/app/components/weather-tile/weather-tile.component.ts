@@ -7,7 +7,7 @@ import { IWeatherModel } from 'src/models/weatherModel';
   templateUrl: './weather-tile.component.html',
   styleUrls: ['./weather-tile.component.css']
 })
-export class WeatherTileComponent implements OnInit {
+export class WeatherTileComponent {
 
   @Input()
   weatherObj: IWeatherModel = { name: '', temperature: 0, sunriseTime: '', sunsetTime: '' };
@@ -15,8 +15,6 @@ export class WeatherTileComponent implements OnInit {
 
   showForecast(name: string) {
     this._route.navigate([`detail/${name}`] );
-  }
-  ngOnInit(): void {
   }
 
 }

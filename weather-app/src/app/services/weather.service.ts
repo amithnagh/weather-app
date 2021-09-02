@@ -9,11 +9,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class WeatherService {
   url: string = 'http://api.openweathermap.org/data/2.5/weather';
   appId: string = '3d8b309701a13f65b660fa2c64cdc517';
-  // selectedCity: Observable<string> = new BehaviorSubject('');
 
-  // getSelectedCity() {
-  //   this.selectedCity.asObservable();
-  // }
   constructor(private http: HttpClient) { }
   
   getWeatherByCity(name: string) : Observable<IWeatherModel> {

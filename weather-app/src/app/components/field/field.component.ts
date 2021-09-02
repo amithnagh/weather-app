@@ -5,9 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.css']
 })
-export class FieldComponent implements OnInit {
-  @Input()
-  label:string = '';
+export class FieldComponent {
 
   @Input()
   value: any = '';
@@ -19,10 +17,5 @@ export class FieldComponent implements OnInit {
   icon: any = '';
 
   suffix = "°C";
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
