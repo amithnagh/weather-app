@@ -8,15 +8,15 @@ import { WeatherTileComponent } from './weather-tile.component';
 describe('WeatherTileComponent', () => {
   let component: WeatherTileComponent;
   let fixture: ComponentFixture<WeatherTileComponent>;
-  let routerSpy = { navigate: jasmine.createSpy('navigate')};
+  let routerSpy = { navigate: jasmine.createSpy('navigate') };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ WeatherTileComponent, FieldComponent ],
+      imports: [RouterTestingModule],
+      declarations: [WeatherTileComponent, FieldComponent],
       providers: [{ provide: Router, useValue: routerSpy }],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

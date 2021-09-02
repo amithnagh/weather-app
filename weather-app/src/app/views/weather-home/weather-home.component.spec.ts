@@ -12,10 +12,10 @@ describe('WeatherHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule ],
-      declarations: [ WeatherHomeComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [WeatherHomeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -41,7 +41,7 @@ describe('WeatherHomeComponent', () => {
   it('should call add city function with proper data when weatherService is called', () => {
     mockWeatherService = TestBed.inject(WeatherService);
     mockWeatherService.getWeatherByCity = jasmine.createSpy().and.returnValue(of(
-      {name: 'London', main: {temp: 15}, sys: { sunrise: 1630386710, sunset: 1630435813}}))
+      { name: 'London', main: { temp: 15 }, sys: { sunrise: 1630386710, sunset: 1630435813 } }))
     spyOn(component, 'addCity');
 
     component.weatherService('London');

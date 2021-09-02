@@ -9,9 +9,9 @@ describe('ForecastTileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForecastTileComponent, FieldComponent ]
+      declarations: [ForecastTileComponent, FieldComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

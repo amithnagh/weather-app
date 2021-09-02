@@ -10,15 +10,15 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class WeatherDetailComponent implements OnInit {
   selectedCity: string = '';
-  forecastArray:any = [];
+  forecastArray: any = [];
 
   constructor(private _service: WeatherService, private _route: ActivatedRoute) { }
 
   getForecast(city: string) {
     this._service.getForecastByCity(this.selectedCity).subscribe(
-      (body:any) => {
-        this.forecastArray = body.list.filter( (day: any) => {
-          if(day.dt_txt.includes('09:00:00')) {
+      (body: any) => {
+        this.forecastArray = body.list.filter((day: any) => {
+          if (day.dt_txt.includes('09:00:00')) {
             return day;
           }
         });

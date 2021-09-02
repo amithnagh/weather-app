@@ -10,16 +10,17 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class WeatherHomeComponent implements OnInit {
   cityObj!: IWeatherModel;
-  cities: string [] =  ['London', 'Paris', 'Budapest', 'Rome', 'Florence'];
-dateTimeCoverter = new DateTimeCoverter();
-cityList: IWeatherModel[] = [];
+  cities: string[] = ['London', 'Paris', 'Budapest', 'Rome', 'Florence'];
+  dateTimeCoverter = new DateTimeCoverter();
+  cityList: IWeatherModel[] = [];
 
   constructor(private _weatherService: WeatherService) { }
 
   addCity = (name: string, temp: number, sunriseTime: number, sunsetTime: number) => {
-    this.cityList.push({ name: name, temperature: temp,
-      sunriseTime: this.dateTimeCoverter.timestampToDate(sunriseTime*1000),
-      sunsetTime: this.dateTimeCoverter.timestampToDate(sunsetTime*1000)
+    this.cityList.push({
+      name: name, temperature: temp,
+      sunriseTime: this.dateTimeCoverter.timestampToDate(sunriseTime * 1000),
+      sunsetTime: this.dateTimeCoverter.timestampToDate(sunsetTime * 1000)
     })
   }
 
@@ -28,9 +29,9 @@ cityList: IWeatherModel[] = [];
       (data: any) => {
         console.log(data);
         const { name } = data;
-        const { main: {temp} } = data;
-        const { sys: {sunrise} } = data;
-        const { sys: {sunset} } = data;
+        const { main: { temp } } = data;
+        const { sys: { sunrise } } = data;
+        const { sys: { sunset } } = data;
         this.addCity(name, temp, sunrise, sunset);
       }
     );

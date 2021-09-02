@@ -13,10 +13,10 @@ describe('WeatherDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule, RouterTestingModule ], 
-      declarations: [ WeatherDetailComponent ]
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [WeatherDetailComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -32,7 +32,7 @@ describe('WeatherDetailComponent', () => {
   it('should call weatherforecast service and return list of objects with time as 09:00:00', () => {
     mockWeatherService = TestBed.inject(WeatherService);
     mockWeatherService.getForecastByCity = jasmine.createSpy().and.returnValue(of(
-      {list:[{seaLevel: 101, dt_txt: '09:00:00'},{seaLevel: 101, dt_txt: '09:00:00'},{seaLevel: 101, dt_txt: '10:00:00'}]}));
+      { list: [{ seaLevel: 101, dt_txt: '09:00:00' }, { seaLevel: 101, dt_txt: '09:00:00' }, { seaLevel: 101, dt_txt: '10:00:00' }] }));
     component.getForecast('London');
     expect(component.forecastArray.length).toBe(2);
   });

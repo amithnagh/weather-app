@@ -14,7 +14,7 @@ export class WeatherTileComponent {
   constructor(private _route: Router) { }
 
   showForecast(name: string) {
-    this._route.navigate([`detail/${name}`] );
+    this._route.navigate([`detail/${name}`]);
   }
 
 }

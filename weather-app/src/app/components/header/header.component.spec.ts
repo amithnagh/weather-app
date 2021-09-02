@@ -7,15 +7,15 @@ import { HeaderComponent } from './header.component';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let routerSpy = { navigate: jasmine.createSpy('navigate')};
+  let routerSpy = { navigate: jasmine.createSpy('navigate') };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ HeaderComponent ],
+      imports: [RouterTestingModule],
+      declarations: [HeaderComponent],
       providers: [{ provide: Router, useValue: routerSpy }]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

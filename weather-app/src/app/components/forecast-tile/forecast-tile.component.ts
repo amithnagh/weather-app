@@ -9,5 +9,5 @@ export class ForecastTileComponent {
 
   @Input()
   forecastObj: any;
-  
+
 }

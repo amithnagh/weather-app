@@ -1,6 +1,7 @@
 <div class="container" (click)="showForecast(weatherObj.name)">
-    <app-field  class="width-25" [value]="weatherObj.name" icon="fas fa-building"></app-field>
-    <app-field  class="width-25" label="Temperature" [value]="weatherObj.temperature" [showSuffix]="true" icon="fas fa-temperature-high"></app-field>
-    <app-field  class="width-25" label="Sunrise" [value]="weatherObj.sunriseTime" icon="fas fa-sun"></app-field>
-    <app-field  class="width-25" label="Sunset" [value]="weatherObj.sunsetTime" icon="far fa-sun"></app-field>
+    <app-field class="width-25" [value]="weatherObj.name" icon="fas fa-building"></app-field>
+    <app-field class="width-25" label="Temperature" [value]="weatherObj.temperature" [showSuffix]="true"
+        icon="fas fa-temperature-high"></app-field>
+    <app-field class="width-25" label="Sunrise" [value]="weatherObj.sunriseTime" icon="fas fa-sun"></app-field>
+    <app-field class="width-25" label="Sunset" [value]="weatherObj.sunsetTime" icon="far fa-sun"></app-field>
 </div>
