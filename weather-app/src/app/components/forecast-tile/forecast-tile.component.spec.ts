@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FieldComponent } from '../field/field.component';
 
 import { ForecastTileComponent } from './forecast-tile.component';
 
@@ -8,7 +9,7 @@ describe('ForecastTileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForecastTileComponent ]
+      declarations: [ ForecastTileComponent, FieldComponent ]
     })
     .compileComponents();
   });

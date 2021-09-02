@@ -14,11 +14,9 @@ export class WeatherTileComponent implements OnInit {
   constructor(private _route: Router) { }
 
   showForecast(name: string) {
-    console.log(name);
     this._route.navigate([`detail/${name}`] );
   }
   ngOnInit(): void {
-    // console.log(this.weatherObj);
   }
 
 }

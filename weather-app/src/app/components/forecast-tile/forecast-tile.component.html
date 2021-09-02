@@ -1,5 +1,5 @@
 <div class="container">
-    <app-field  class="width-25" [value]="forecastObj.dt_txt" icon="fas fa-calendar-alt"></app-field>
-    <app-field  class="width-25" label="Temperature" [value]="forecastObj.main.temp" [showSuffix]="true" icon="fas fa-temperature-high"></app-field>
-    <app-field  class="width-25" label="Sea Level" [value]="forecastObj.main.sea_level" icon="fas fa-water"></app-field>
+    <app-field  class="width-25" [value]="forecastObj?.dt_txt" icon="fas fa-calendar-alt"></app-field>
+    <app-field  class="width-25" label="Temperature" [value]="forecastObj?.main.temp" [showSuffix]="true" icon="fas fa-temperature-high"></app-field>
+    <app-field  class="width-25" label="Sea Level" [value]="forecastObj?.main.sea_level" icon="fas fa-water"></app-field>
 </div>

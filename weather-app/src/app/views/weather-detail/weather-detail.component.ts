@@ -14,19 +14,21 @@ export class WeatherDetailComponent implements OnInit {
 
   constructor(private _service: WeatherService, private _route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.selectedCity = this._route.snapshot.params['city'];
+  getForecast(city: string) {
     this._service.getForecastByCity(this.selectedCity).subscribe(
       (body:any) => {
-        console.log(body);
         this.forecastArray = body.list.filter( (day: any) => {
           if(day.dt_txt.includes('09:00:00')) {
             return day;
           }
         });
-        console.log('finalList', this.forecastArray);
       }
     );
+  }
+
+  ngOnInit(): void {
+    this.selectedCity = this._route.snapshot.params['city'];
+    this.getForecast(this.selectedCity);
   }
 
 }

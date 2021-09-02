@@ -69,14 +69,12 @@ cityList: IWeatherModel[] = [];
       sunriseTime: this.dateTimeCoverter.timestampToDate(sunriseTime*1000),
       sunsetTime: this.dateTimeCoverter.timestampToDate(sunsetTime*1000)
     })
-    // console.log(this.cityList);
   }
 
   weatherService(city: string): void {
-    console.log(city);
     this._weatherService.getWeatherByCity(city).subscribe(
       (data: any) => {
-        console.log(data.name, data.main.temp, data.sys.sunrise, data.sys.sunset);
+        console.log(data);
         const { name } = data;
         const { main: {temp} } = data;
         const { sys: {sunrise} } = data;
