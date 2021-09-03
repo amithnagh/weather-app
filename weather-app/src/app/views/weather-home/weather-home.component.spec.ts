@@ -4,6 +4,7 @@ import { WeatherHomeComponent } from './weather-home.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { WeatherService } from 'src/app/services/weather.service';
 import { of } from 'rxjs';
+import { throwError } from 'rxjs';
 
 describe('WeatherHomeComponent', () => {
   let component: WeatherHomeComponent;
@@ -29,13 +30,13 @@ describe('WeatherHomeComponent', () => {
   });
 
   it('should add city to cityList array with passed params', () => {
-    component.cityList = [];
+    component.cityWeatherList = [];
     component.addCity('London', 12, 1630386710, 1630435813);
-    expect(component.cityList.length).toBe(1);
-    expect(component.cityList[0].name).toBe('London');
-    expect(component.cityList[0].temperature).toBe(12);
-    expect(component.cityList[0].sunriseTime).toBe(new Date(1630386710000).toLocaleTimeString());
-    expect(component.cityList[0].sunsetTime).toBe(new Date(1630435813000).toLocaleTimeString());
+    expect(component.cityWeatherList.length).toBe(1);
+    expect(component.cityWeatherList[0].name).toBe('London');
+    expect(component.cityWeatherList[0].temperature).toBe(12);
+    expect(component.cityWeatherList[0].sunriseTime).toBe(new Date(1630386710000).toLocaleTimeString());
+    expect(component.cityWeatherList[0].sunsetTime).toBe(new Date(1630435813000).toLocaleTimeString());
   })
 
   it('should call add city function with proper data when weatherService is called', () => {
@@ -48,5 +49,15 @@ describe('WeatherHomeComponent', () => {
 
     expect(component.addCity).toHaveBeenCalledWith('London', 15, 1630386710, 1630435813);
   })
+
+  it('should set show error to true if there is network failure', () => {
+    mockWeatherService = TestBed.inject(WeatherService);
+    mockWeatherService.getWeatherByCity = jasmine.createSpy().and.returnValue(throwError('something went wrong'));
+    spyOn(component, 'addCity');
+    component.weatherService('London');
+
+    expect(component.addCity).not.toHaveBeenCalled();
+    expect(component.showError).toBeTrue();
+  });
 });
 

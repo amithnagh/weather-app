@@ -1,0 +1,21 @@
+.container {
+    padding: 20px;
+    margin: 5px 10px;
+    font-size: medium;
+    background-color: #fff;
+}
+.error-class {
+    color: red;
+    height: 20px;
+    padding: 10px;
+}
+.close-button {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #17a2b8;
+    border: none;
+    font-size: medium;
+}

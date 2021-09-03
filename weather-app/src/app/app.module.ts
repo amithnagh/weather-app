@@ -11,6 +11,7 @@ import { WeatherTileComponent } from './components/weather-tile/weather-tile.com
 import { FieldComponent } from './components/field/field.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ForecastTileComponent } from './components/forecast-tile/forecast-tile.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ForecastTileComponent } from './components/forecast-tile/forecast-tile.
     FooterComponent,
     WeatherTileComponent,
     FieldComponent,
-    ForecastTileComponent
+    ForecastTileComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

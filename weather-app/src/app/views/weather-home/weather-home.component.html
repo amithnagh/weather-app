@@ -1,3 +1,6 @@
-<div *ngFor="let city of cityList" class="city-list">
+<div *ngFor="let city of cityWeatherList" class="city-list">
     <app-weather-tile [weatherObj]="city"></app-weather-tile>
+</div>
+<div *ngIf="showError"> 
+    <app-error [messages] = "messages"></app-error>
 </div>

@@ -1,0 +1,7 @@
+<div class="container" *ngIf="showComponent">
+    <div class="error-class" *ngFor="let message of messages">
+        <i class="fa fa-exclamation-triangle"></i> {{ message }}
+    </div>
+    <div class="error-class">Please try again Later</div>
+    <button class="close-button" (click)="showComponent = false"> Hide Message(s)</button>
+</div>

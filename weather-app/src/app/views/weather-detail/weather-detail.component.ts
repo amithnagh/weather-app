@@ -11,6 +11,8 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class WeatherDetailComponent implements OnInit {
   selectedCity: string = '';
   forecastArray: any = [];
+  showError: boolean = false;
+  messages: string [] = [];
 
   constructor(private _service: WeatherService, private _route: ActivatedRoute) { }
 
@@ -22,6 +24,10 @@ export class WeatherDetailComponent implements OnInit {
             return day;
           }
         });
+      },
+      () => {
+        this.showError = true;
+        this.messages.push(`Technical Error occurred while fetching data for ${this.selectedCity}`)
       }
     );
   }

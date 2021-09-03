@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IWeatherModel } from 'src/models/weatherModel';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { serviceConstants } from '../constants/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
-  url: string = 'http://api.openweathermap.org/data/2.5/weather';
-  appId: string = '3d8b309701a13f65b660fa2c64cdc517';
+
+  params = {
+    appId: serviceConstants.appId,
+    units: serviceConstants.units,
+  }
 
   constructor(private http: HttpClient) { }
 
-  getWeatherByCity(name: string): Observable<IWeatherModel> {
-    this.url = 'http://api.openweathermap.org/data/2.5/weather' + `?q=${name}&appid=${this.appId}&units=metric`;
-    return this.http.get<IWeatherModel>(this.url);
+  getWeatherByCity(name: string): Observable<IWeatherModel | any> {
+    const url = serviceConstants.baseUrl + `weather?q=${name}`;
+    return this.http.get<IWeatherModel>(url, { params: this.params });
   }
 
   getForecastByCity(name: string) {
-    this.url = 'http://api.openweathermap.org/data/2.5/forecast' + `?q=${name}&appid=${this.appId}&units=metric`;
-    return this.http.get(this.url);
+    const url = serviceConstants.baseUrl + `forecast?q=${name}`;
+    return this.http.get(url, {params: this.params});
   }
 }

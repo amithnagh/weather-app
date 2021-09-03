@@ -6,3 +6,4 @@
         <app-forecast-tile [forecastObj]="day"></app-forecast-tile>
     </div>
 </div>
+<app-error [messages] = "messages" *ngIf="showError"></app-error>
