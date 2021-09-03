@@ -1,5 +1,6 @@
 <div class="container-tile">
-    <app-field [value]="forecastObj?.dt_txt" icon="fas fa-calendar-alt"></app-field>
+    <app-field [value]="dateTime[0]" icon="fas fa-calendar-alt"></app-field>
+    <app-field [value]="dateTime[1]" icon="fas fa-clock"></app-field>
     <app-field [value]="forecastObj?.main.temp" [showSuffix]="true" icon="fas fa-temperature-high"></app-field>
     <app-field [value]="forecastObj?.main.sea_level" icon="fas fa-water"></app-field>
 </div>

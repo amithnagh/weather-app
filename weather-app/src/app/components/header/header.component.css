@@ -8,4 +8,11 @@ h1 {
     padding-top:10px;
     padding-left:10px;
     cursor: pointer;
+    width: 210px;
+}
+
+@media screen and (max-width: 650px) {
+    .header {
+        padding-left: 0px;;
+    }
 }

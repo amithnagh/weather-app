@@ -6,3 +6,9 @@
 .city-list:hover {
     transform: scale(1.01);
 }
+
+@media screen and (max-width:410px) {
+    .city-list {
+        margin: 2px 0px;
+    }
+}

@@ -5,9 +5,15 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './forecast-tile.component.html',
   styleUrls: ['./forecast-tile.component.css']
 })
-export class ForecastTileComponent {
+export class ForecastTileComponent implements OnInit{
 
   @Input()
   forecastObj: any;
 
+  dateTime: string [] = [];
+
+  ngOnInit() {
+    this.dateTime = this.forecastObj.dt_txt.split(" ");
+    console.log(this.dateTime);
+  }
 }

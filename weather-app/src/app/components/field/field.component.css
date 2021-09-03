@@ -3,11 +3,36 @@
     height: 60px;
     padding: 25px 0px 0px 25px;
 }
-.label {
-    color:#fff;
-}
 .value {
     color: #222;
     padding-top:3px;
     font-weight: bolder;
+}
+
+i {
+    padding-right: 10px; 
+    font-size:24px; 
+    color:#3c5e5e;
+    padding-top: 2px;
+}
+
+@media only screen and (max-width: 650px) {
+    .field{
+        padding-left: 0px;
+        height:auto;
+        padding: 5px 0px;
+        display: block;
+    }
+    .value {
+        font-weight: normal;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .field{
+        /* padding-left: 0px; */
+        /* height:auto; */
+        padding: 5px 5px;
+        /* display: block; */
+    }
 }

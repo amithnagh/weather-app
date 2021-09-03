@@ -11,3 +11,12 @@
 app-field {
     width: 25%;
 }
+
+@media screen and (max-width:650px) {
+    app-field {
+        width: 25%;
+    }
+    .container-tile {
+        flex-wrap: wrap;
+    }
+}
