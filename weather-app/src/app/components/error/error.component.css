@@ -1,7 +1,6 @@
 .container {
     padding: 20px;
     margin: 5px 10px;
-    font-size: medium;
     background-color: #fff;
 }
 .error-class {
@@ -17,5 +16,4 @@
     padding: 10px;
     background-color: #17a2b8;
     border: none;
-    font-size: medium;
 }

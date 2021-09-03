@@ -2,3 +2,12 @@
 * {
     margin: 0;
 }
+
+.container-tile {
+    display: flex;
+    background-color: #fff;
+}
+
+app-field {
+    width: 25%;
+}

@@ -1,12 +1,11 @@
 .header {
-    height: 100px;
+    height: 80px;
     background-color: #17a2b8;
     color: #fff;
-    font-size: larger;
     padding-left: 20px;
 }
 h1 {
-    padding-top:20px;
-    padding-left:3px;
+    padding-top:10px;
+    padding-left:10px;
     cursor: pointer;
 }
