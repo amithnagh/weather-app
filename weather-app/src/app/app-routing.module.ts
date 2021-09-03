@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'detail/:city',
     component: WeatherDetailComponent  
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full'}
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({

@@ -12,8 +12,11 @@ export class ForecastTileComponent implements OnInit{
 
   dateTime: string [] = [];
 
+  splitDateTime() {
+    this.forecastObj ? this.dateTime = this.forecastObj.dt_txt.split(" ") : this.dateTime = [];
+  }
+
   ngOnInit() {
-    this.dateTime = this.forecastObj.dt_txt.split(" ");
-    console.log(this.dateTime);
+    this.splitDateTime();
   }
 }
