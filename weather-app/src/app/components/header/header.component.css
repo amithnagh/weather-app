@@ -13,6 +13,8 @@ h1 {
 
 @media screen and (max-width: 650px) {
     .header {
-        padding-left: 0px;;
+        height: 60px;
+        padding-bottom: 10px;
+        padding-left: 0px;
     }
 }
