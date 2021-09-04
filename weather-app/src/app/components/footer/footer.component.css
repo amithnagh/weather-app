@@ -1,0 +1,16 @@
+.footer {
+    position: absolute;
+    bottom:0;
+    height: 60px;
+    background-color: #fff;
+    width: 100%;
+    padding-top:5px;
+    font-weight: bolder;
+    color: #222;
+}
+
+i {
+    padding: 10px;
+    font-size: 24px;
+    color: #222;
+}
