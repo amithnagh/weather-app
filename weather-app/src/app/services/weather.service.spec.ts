@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 
 import { WeatherService } from './weather.service';
 import { HttpClientTestingModule, HttpTestingController, TestRequest } from '@angular/common/http/testing';
-import { of } from 'rxjs';
 
 describe('WeatherService', () => {
   let service: WeatherService;

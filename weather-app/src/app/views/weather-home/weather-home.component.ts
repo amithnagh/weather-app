@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IWeatherModel } from 'src/models/weatherModel';
+import { IWeatherModel } from 'src/app/models/weatherModel';
 import { DateTimeCoverter } from 'src/app/utils/dateTimeCoverter';
 import { WeatherService } from 'src/app/services/weather.service';
 import { projectConstants } from 'src/app/constants/constants';
@@ -14,7 +14,6 @@ export class WeatherHomeComponent implements OnInit {
   cityNames = projectConstants.cities;
   dateTimeCoverter = new DateTimeCoverter();
   cityWeatherList: IWeatherModel[] = [];
-  // hasError = { showError: false, message: ''}
   showError: boolean = false;
   messages: string [] = [];
 

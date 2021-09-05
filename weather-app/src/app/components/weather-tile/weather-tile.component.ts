@@ -1,11 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IWeatherModel } from 'src/models/weatherModel';
+import { IWeatherModel } from 'src/app/models/weatherModel';
 
 @Component({
   selector: 'app-weather-tile',
   templateUrl: './weather-tile.component.html',
-  styleUrls: ['./weather-tile.component.css']
 })
 export class WeatherTileComponent {
 

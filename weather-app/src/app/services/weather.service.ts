@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IWeatherModel } from 'src/models/weatherModel';
+import { IWeatherModel } from 'src/app/models/weatherModel';
 import { Observable } from 'rxjs';
 import { serviceConstants } from '../constants/constants';
 
@@ -16,7 +16,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeatherByCity(name: string): Observable<IWeatherModel | any> {
+  getWeatherByCity(name: string): Observable<IWeatherModel> {
     const url = serviceConstants.baseUrl + `weather?q=${name}`;
     return this.http.get<IWeatherModel>(url, { params: this.params });
   }
